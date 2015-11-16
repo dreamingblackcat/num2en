@@ -14,5 +14,9 @@ describe "Num To En Converter" do
   it "converts 2 to two" do
     expect(converter.convert(2)).to eq "two"
   end
+
+  it "converts 3 to three" do
+    expect(converter.convert(3)).to eq "three"
+  end
 end
 

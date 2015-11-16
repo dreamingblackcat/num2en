@@ -1,6 +1,13 @@
 class Num2en
 
   def convert(num)
-    if num == 1 then "one" else "two" end
+    case num
+    when 1
+      "one"
+    when 2
+      "two"
+    when 3
+      "three"
+    end
   end
 end
