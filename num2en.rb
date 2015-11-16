@@ -48,7 +48,7 @@ class Num2en
     end
   end
 
-  def convert_tens(num)
+  def convert_tens num
     case num
     when 20
       "twenty"
@@ -69,15 +69,29 @@ class Num2en
     end
   end
 
+  def convert_hundreds num
+    convert(num % 100) + " hundred"
+  end
+
   def convert(num)
-    if num < 10
-      convert_single(num)
-    elsif num < 20
-      convert_teens(num)
-    elsif num % 10 == 0
-      convert_tens(num)
-    else
-      convert( num - (num % 10)) + " " + convert(num % 10)
+    if num < 100
+      if num < 10
+        return convert_single(num)
+      elsif num < 20
+        return convert_teens(num)
+      elsif num % 10 == 0
+        return convert_tens(num)
+      else
+        return convert( num - (num % 10)) + " " + convert(num % 10)
+      end
+    end
+
+    if num < 1000
+      if num % 100 == 0
+        return convert_hundreds(num / 100)
+      else
+        return convert_hundreds(num / 100) + " and " + convert(num % 100)      
+      end
     end
 
   end

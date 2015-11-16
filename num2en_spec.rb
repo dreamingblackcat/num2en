@@ -129,5 +129,25 @@ describe "Num To En Converter" do
   it "converts 78 to seventy eight" do
     expect(converter.convert(78)).to eq "seventy eight"
   end
+
+  it "converts 100 to hundred" do
+    expect(converter.convert(100)).to eq "one hundred"
+  end
+
+  it "converts 500 to hundred" do
+    expect(converter.convert(500)).to eq "five hundred"
+  end
+
+  it "converts 314 to five hundred and ten" do
+    expect(converter.convert(314)).to eq "three hundred and fourteen"
+  end
+
+  it "converts 510 to five hundred and ten" do
+    expect(converter.convert(510)).to eq "five hundred and ten"
+  end
+
+  it "converts 666 to six hundred and sixty six" do
+    expect(converter.convert(666)).to eq "six hundred and sixty six"
+  end
 end
 
