@@ -48,13 +48,34 @@ class Num2en
     end
   end
 
+  def convert_tens(num)
+    case num
+    when 20
+      "twenty"
+    when 30
+      "thirty"
+    when 40
+      "forty"
+    when 50
+      "fifty"
+    when 60
+      "sixty"
+    when 70
+      "seventy"
+    when 80
+      "eighty"
+    when 90
+      "ninety"
+    end
+  end
+
   def convert(num)
     if num < 10
       convert_single(num)
     elsif num < 20
       convert_teens(num)
-    else
-      "twenty"
+    elsif num % 10 == 0
+      convert_tens(num)
     end
 
   end
