@@ -76,6 +76,8 @@ class Num2en
       convert_teens(num)
     elsif num % 10 == 0
       convert_tens(num)
+    else
+      convert( num - (num % 10)) + " " + convert(num % 10)
     end
 
   end
