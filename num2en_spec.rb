@@ -46,5 +46,41 @@ describe "Num To En Converter" do
   it "converts 10 to ten" do
     expect(converter.convert(10)).to eq "ten"
   end
+
+  it "converts 11 to eleven" do
+    expect(converter.convert(11)).to eq "eleven"
+  end
+
+  it "converts 12 to twelve" do
+    expect(converter.convert(12)).to eq "twelve"
+  end
+
+  it "converts 13 to thirteen" do
+    expect(converter.convert(13)).to eq "thirteen"
+  end
+
+  it "converts 14 to fourteen" do
+    expect(converter.convert(14)).to eq "fourteen"
+  end
+
+  it "converts 15 to fifteen" do
+    expect(converter.convert(15)).to eq "fifteen"
+  end
+
+  it "converts 16 to sixteen" do
+    expect(converter.convert(16)).to eq "sixteen"
+  end
+
+  it "converts 17 to seventeen" do
+    expect(converter.convert(17)).to eq "seventeen"
+  end
+
+  it "converts 18 to eighteen" do
+    expect(converter.convert(18)).to eq "eighteen"
+  end
+
+  it "converts 19 to nineteen" do
+    expect(converter.convert(19)).to eq "nineteen"
+  end
 end
 
