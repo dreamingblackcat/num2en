@@ -82,5 +82,9 @@ describe "Num To En Converter" do
   it "converts 19 to nineteen" do
     expect(converter.convert(19)).to eq "nineteen"
   end
+
+  it "converts 20 to twenty" do
+    expect(converter.convert(20)).to eq "twenty"
+  end
 end
 

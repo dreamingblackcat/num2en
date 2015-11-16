@@ -51,8 +51,10 @@ class Num2en
   def convert(num)
     if num < 10
       convert_single(num)
-    else
+    elsif num < 20
       convert_teens(num)
+    else
+      "twenty"
     end
 
   end
