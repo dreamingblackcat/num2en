@@ -1,8 +1,10 @@
 require 'rspec'
+require './num2en'
 
 describe "Num To En Converter" do
- it "works" do
-    expect(true).to be true
- end
+  let(:converter) { Num2en.new }
+  it "exists" do
+    expect(converter).not_to be_nil
+  end
 end
 
