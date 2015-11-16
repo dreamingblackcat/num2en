@@ -1,6 +1,6 @@
 class Num2en
 
-  def convert(num)
+  def convert_single num
     case num
     when 1
       "one"
@@ -20,6 +20,11 @@ class Num2en
       "eight"
     when 9
       "nine"
+    end
+  end
+
+  def convert_teens num
+    case num
     when 10
       "ten"
     when 11
@@ -41,5 +46,14 @@ class Num2en
     when 19
       "nineteen"
     end
+  end
+
+  def convert(num)
+    if num < 10
+      convert_single(num)
+    else
+      convert_teens(num)
+    end
+
   end
 end
